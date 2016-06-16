@@ -7,6 +7,7 @@
 * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License, version 2 (one or other)
 */
 
+include "../vendor/autoload.php";
 include "./include/bootstrap.inc.php";
 include "./include/tmpfile.inc.php";
 

@@ -16,10 +16,33 @@
             "homepage": "http://www.vrana.cz/"
         }
     ],
+
+    "repositories": [
+        {
+            "type" : "path",
+            "url": "/Users/mfris/DEV/vitess-php-driver"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/stanley-cheung/Protobuf-PHP"
+        }
+    ],
+
+    "minimum-stability": "dev",
+
+    "require": {
+        "grpc/grpc": "dev-release-0_13",
+        "pixelfederation/vitess-php-pdo": "dev-master",
+        "greenlion/php-sql-parser": "dev-master"
+    },
+
     "autoload": {
         "classmap": [
             "plugins/"
-        ]
+        ],
+        "psr-4": {
+            "Adminer\\Vitess\\": "adminer/drivers/Vitess/"
+        }
     },
     "license": [
         "Apache-2.0",

@@ -60,6 +60,7 @@ include "../adminer/include/lang.inc.php";
 include "../adminer/lang/$LANG.inc.php";
 include "../adminer/include/pdo.inc.php";
 include "../adminer/include/driver.inc.php";
+include "../adminer/include/vitess_pdo.inc.php";
 include "../adminer/drivers/sqlite.inc.php";
 include "../adminer/drivers/pgsql.inc.php";
 include "../adminer/drivers/oracle.inc.php";
@@ -68,6 +69,7 @@ include "../adminer/drivers/firebird.inc.php";
 include "../adminer/drivers/simpledb.inc.php";
 include "../adminer/drivers/mongo.inc.php";
 include "../adminer/drivers/elastic.inc.php";
+include "../adminer/drivers/vitess.inc.php";
 include "../adminer/drivers/mysql.inc.php"; // must be included as last driver
 
 define("SERVER", $_GET[DRIVER]); // read from pgsql=localhost
