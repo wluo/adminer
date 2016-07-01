@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30b9cdd03a6c061040777d8b714b6d3f",
-    "content-hash": "e98f883bc4e4cd4c2ceb5a22e85dfd60",
+    "hash": "cb161cb5500871f62dc7fc99ffd382b8",
+    "content-hash": "d5f48b6fbaab6258a1fe87fbdd99e193",
     "packages": [
         {
             "name": "datto/protobuf-php",
@@ -311,16 +311,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "dev-master",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "79c6fbef131eed51ab82bf813e9694419931bc8b"
+                "reference": "d094e337976dff9d8e2424e8485872194e768662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/79c6fbef131eed51ab82bf813e9694419931bc8b",
-                "reference": "79c6fbef131eed51ab82bf813e9694419931bc8b",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+                "reference": "d094e337976dff9d8e2424e8485872194e768662",
                 "shasum": ""
             },
             "require": {
@@ -369,7 +369,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-06-20 07:37:14"
+            "time": "2016-03-21 20:02:09"
         },
         {
             "name": "guzzlehttp/promises",
@@ -534,11 +534,16 @@
         {
             "name": "pixelfederation/vitess-php-pdo",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pixelfederation/vitess-php-pdo.git",
+                "reference": "06c1500406d6f47926b0c3c26c742ad8ebce05c6"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/mfris/DEV/vitess-php-driver",
-                "reference": "2b24ba14cefc5b71b420a3a6d9397634990f1c48",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/pixelfederation/vitess-php-pdo/zipball/06c1500406d6f47926b0c3c26c742ad8ebce05c6",
+                "reference": "06c1500406d6f47926b0c3c26c742ad8ebce05c6",
+                "shasum": ""
             },
             "require": {
                 "doctrine/collections": "^1.3",
@@ -559,21 +564,18 @@
                     "VitessPdo\\": "src/VitessPdo/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "VitessPdoTest\\": "tests/VitessPdoTest/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
             "description": "PHP PDO compliant driver for Vitess PHP client.",
             "homepage": "https://git.pixelfederation.com/shared/Vitess.Driver.PHP",
             "keywords": [
-                "PDO",
                 "Vitess",
-                "driver"
-            ]
+                "driver",
+                "pdo"
+            ],
+            "time": "2016-07-01 17:46:30"
         },
         {
             "name": "psr/http-message",
@@ -630,12 +632,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/youtube/vitess.git",
-                "reference": "0dfece914c0cb594ef6129cc7dbc1944d1cc666e"
+                "reference": "cb57aae1911a5313577e1f7b09d38e717f84d66b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/youtube/vitess/zipball/0dfece914c0cb594ef6129cc7dbc1944d1cc666e",
-                "reference": "0dfece914c0cb594ef6129cc7dbc1944d1cc666e",
+                "url": "https://api.github.com/repos/youtube/vitess/zipball/cb57aae1911a5313577e1f7b09d38e717f84d66b",
+                "reference": "cb57aae1911a5313577e1f7b09d38e717f84d66b",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +654,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "PHP client for Vitess",
-            "time": "2016-06-29 18:46:10"
+            "time": "2016-07-01 16:59:48"
         }
     ],
     "packages-dev": [],

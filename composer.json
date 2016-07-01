@@ -19,10 +19,6 @@
 
     "repositories": [
         {
-            "type" : "path",
-            "url": "/Users/mfris/DEV/vitess-php-driver"
-        },
-        {
             "type": "vcs",
             "url": "https://github.com/stanley-cheung/Protobuf-PHP"
         }
