@@ -47,8 +47,8 @@ abstract class VitessPDO extends PDO
         } catch (Exception $ex) {
             auth_error($ex->getMessage());
         }
-        //$this->setAttribute(13, array('Min_VitessPDOStatement')); // 13 - PDO::ATTR_STATEMENT_CLASS
-        $this->server_info = $this->getAttribute(4); // 4 - PDO::ATTR_SERVER_VERSION
+        $this->setAttribute(\PDO::ATTR_STATEMENT_CLASS, array('Min_VitessPDOStatement'));
+        $this->server_info = $this->getAttribute(\PDO::ATTR_SERVER_VERSION);
     }
 
     /**

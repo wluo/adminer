@@ -760,7 +760,7 @@ if (isset($_GET["vitess"])) {
 		return $connection->result("SELECT @@max_connections");
 	}
 
-	$jush = "vitess";
+	$jush = "sql";
 	$types = array(); ///< @var array ($type => $maximum_unsigned_length, ...)
 	$structured_types = array(); ///< @var array ($description => array($type, ...), ...)
 	foreach (array(

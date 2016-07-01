@@ -33,7 +33,7 @@
     "require": {
         "grpc/grpc": "dev-release-0_13",
         "pixelfederation/vitess-php-pdo": "dev-master",
-        "greenlion/php-sql-parser": "dev-master"
+        "php-console/php-console": "~3.0"
     },
 
     "autoload": {

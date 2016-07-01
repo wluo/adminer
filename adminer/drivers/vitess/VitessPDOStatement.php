@@ -13,7 +13,7 @@ use VitessPdo\PDO\PDOStatement;
  * Description of class VitessPDOStatement
  *
  * @author  mfris
- * @package ${NAMESPACE}
+ * @package Adminer\Vitess
  */
 class VitessPDOStatement extends PDOStatement
 {

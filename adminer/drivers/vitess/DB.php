@@ -7,7 +7,6 @@
 
 namespace Adminer\Vitess;
 
-use Adminer\Vitess\PDOStatementMock\Keyspace;
 use Min_VitessPDO;
 
 /**
@@ -25,19 +24,6 @@ class DB extends Min_VitessPDO
     public $extension = "VitessPDO";
 
     /**
-     * @var string
-     */
-    private $keyspace;
-
-    /**
-     * @var string[]
-     */
-    private static $supportedSqlCommands = [
-        'USE' => 'USE',
-        'SHOW' => 'SHOW',
-    ];
-
-    /**
      * @param string $server
      * @param string $username
      * @param string $password
@@ -47,9 +33,23 @@ class DB extends Min_VitessPDO
      */
     public function connect($server, $username, $password, $keyspace)
     {
-        $this->keyspace = $keyspace;
-        $host = str_replace(":", ";unix_socket=", preg_replace('~:(\\d)~', ';port=\\1', $server));
-        $this->dsn("vitess:host=" . $host . ';dbname=' . $keyspace, $username, $password);
+        $hosts = explode("|", $server);
+        $host = str_replace(":", ";unix_socket=", preg_replace('~:(\\d)~', ';port=\\1', $hosts[0]));
+        $dsnString = "vitess:host=" . $host;
+
+        if ($keyspace) {
+            $dsnString .= ';keyspace=' . $keyspace;
+        }
+
+        if (isset($hosts[1])) {
+            $dsnString .= ';vtctld_host=' . preg_replace('~:(\\d)~', ';vtctld_port=\\1', $hosts[1]);
+        }
+
+        if (isset($hosts[2])) {
+            $dsnString .= ';cell=' . trim($hosts[2]);
+        }
+
+        $this->dsn($dsnString, $username, $password);
 
         return true;
     }
@@ -86,25 +86,11 @@ class DB extends Min_VitessPDO
     public function query($query, $unbuffered = false)
     {
         //$this->setAttribute(1000, !$unbuffered); // 1000 - PDO::MYSQL_ATTR_USE_BUFFERED_QUERY
-        $parser = new \PHPSQLParser\PHPSQLParser($query);
-        $parsedQuery = $parser->parsed;
-        $command = false;
 
-        foreach (self::$supportedSqlCommands as $supportedCommand) {
-            if (isset($parsedQuery[$supportedCommand])) {
-                $command = $supportedCommand;
-                break;
-            }
-        }
+        $result =  parent::query($query, $unbuffered);
+        \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($query, 'query');
+        \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($result, 'result');
 
-        if (!$command) {
-            throw new Exception("Unsupported query - " . $query);
-        }
-
-        if ($command === 'USE') {
-            return new Keyspace($this->keyspace);
-        }
-
-        return parent::query($query, $unbuffered);
+        return $result;
     }
 }
