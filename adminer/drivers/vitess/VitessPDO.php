@@ -17,11 +17,11 @@ use VitessPdo\PDO;
  */
 abstract class VitessPDO extends PDO
 {
-    private $_result;
-    private $server_info;
-    private $affected_rows;
-    private $errno;
-    private $error;
+    public $_result;
+    public $server_info;
+    public $affected_rows;
+    public $errno;
+    public $error;
 
     /**
      * Min_VitessPDO constructor.
