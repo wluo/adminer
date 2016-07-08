@@ -1,5 +1,5 @@
 <?php
-$drivers["vitess"] = "Vitess (alpha)";
+$drivers["vitess"] = "Vitess (beta)";
 
 if (isset($_GET["vitess"])) {
 	$possible_drivers = array("vitess");
