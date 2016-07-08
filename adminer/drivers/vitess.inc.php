@@ -45,7 +45,7 @@ if (isset($_GET["vitess"])) {
 //			$connection->query("SET sql_quote_show_create = 1, autocommit = 1");
 			return $connection;
 		}
-		$return = $connection->error;
+		$return = 'Connection error. The server string has to be in the following format: vtgateHost:vtgatePort|vtctldHost:vtctldPort|cell.';
 		if (function_exists('iconv') && !is_utf8($return) && strlen($s = iconv("windows-1250", "utf-8", $return)) > strlen($return)) { // windows-1250 - most common Windows encoding
 			$return = $s;
 		}

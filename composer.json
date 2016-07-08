@@ -21,6 +21,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/stanley-cheung/Protobuf-PHP"
+        },
+        {
+            "type": "git",
+            "url": "git@github.com:pixelfederation/PHP-SQL-Parser.git"
         }
     ],
 

@@ -41,13 +41,12 @@ class DB extends Min_VitessPDO
             $dsnString .= ';keyspace=' . $keyspace;
         }
 
-        if (isset($hosts[1])) {
-            $dsnString .= ';vtctld_host=' . preg_replace('~:(\\d)~', ';vtctld_port=\\1', $hosts[1]);
+        if (!isset($hosts[1], $hosts[2])) {
+            return false;
         }
 
-        if (isset($hosts[2])) {
-            $dsnString .= ';cell=' . trim($hosts[2]);
-        }
+        $dsnString .= ';vtctld_host=' . preg_replace('~:(\\d)~', ';vtctld_port=\\1', $hosts[1]);
+        $dsnString .= ';cell=' . trim($hosts[2]);
 
         $this->dsn($dsnString, $username, $password);
 
