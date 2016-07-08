@@ -5,10 +5,10 @@ features are not working yet. Feel free to test and create feature requestsm ide
 
 ## Usage
 
-1) Clone this repository. 
-2) Set up a web server with the document root in the root folder of the cloned repository.
-3) Get a precompiled vtctlclient binary and put it somewhere into PATH, to be accessible from anywhere.
-4) To run adminer, you have to visit this url:
+1. Clone this repository. 
+2. Set up a web server with the document root in the root folder of the cloned repository.
+3. Get a precompiled vtctlclient binary and put it somewhere into PATH, to be accessible from anywhere.
+4. To run adminer, you have to visit this url:
 
 ```
 http://HOSTNAME/adminer/index.php
