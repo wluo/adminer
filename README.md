@@ -37,9 +37,12 @@ On a sharded Vitess setup, it ist currently not possible to insert or update row
 because the Adminer core generates incompatible queries. Therefore, manual query correction has to be made in such 
 cases for the time being.
 
+The implementation also isn't optimal yet, it might use some profiling and optimizations. But it's better than nothing :)
+
 ## TODO
 
-Get rid of the vtctlclient binary, if the Vitess team creates Protobuf stubs for the VtCtl client and commands.
+1. Get rid of the vtctlclient binary, if the Vitess team creates Protobuf stubs for the VtCtl client and commands.
+2. Maybe integrate VSchema manipulation functions (if it won't go against VSchema best practises from the Vitess team).
 
 # Adminer - Database management in a single PHP file
 # Adminer Editor - Data manipulation for end-users
