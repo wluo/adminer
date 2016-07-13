@@ -87,8 +87,11 @@ class DB extends Min_VitessPDO
         //$this->setAttribute(1000, !$unbuffered); // 1000 - PDO::MYSQL_ATTR_USE_BUFFERED_QUERY
 
         $result =  parent::query($query, $unbuffered);
-        \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($query, 'query');
-        \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($result, 'result');
+
+        if (class_exists('PhpConsole\Connector')) {
+            \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($query, 'query');
+            \PhpConsole\Connector::getInstance()->getDebugDispatcher()->dispatchDebug($result, 'result');
+        }
 
         return $result;
     }
