@@ -41,7 +41,7 @@
             "plugins/"
         ],
         "psr-4": {
-            "Adminer\\": "adminer/drivers/"
+            "Adminer\\Vitess\\": "adminer/drivers/Vitess/"
         }
     },
     "license": [
