@@ -20,7 +20,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/stanley-cheung/Protobuf-PHP"
+            "url": "https://github.com/pixelfederation/datto-Protobuf-PHP-fake"
         },
         {
             "type": "git",
