@@ -243,7 +243,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:pixelfederation/PHP-SQL-Parser.git",
-                "reference": "11552094c946d666f3f6b1d524d672df8e59c645"
+                "reference": "5a1091ddc6b92ea5479a324cb06b74e17050cf25"
             },
             "require": {
                 "analog/analog": "^1.0.6",
@@ -293,7 +293,7 @@
                 "issues": "https://github.com/greenlion/PHP-SQL-Parser/issues",
                 "source": "https://github.com/greenlion/PHP-SQL-Parser"
             },
-            "time": "2016-07-06 15:00:04"
+            "time": "2016-07-21 14:59:23"
         },
         {
             "name": "grpc/grpc",
@@ -559,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pixelfederation/vitess-php-pdo.git",
-                "reference": "0757c0e14dc627fe788273d335dc8f69c562207e"
+                "reference": "f537f325280880bc57433a6d306bc3fd30a0c861"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixelfederation/vitess-php-pdo/zipball/0757c0e14dc627fe788273d335dc8f69c562207e",
-                "reference": "0757c0e14dc627fe788273d335dc8f69c562207e",
+                "url": "https://api.github.com/repos/pixelfederation/vitess-php-pdo/zipball/f537f325280880bc57433a6d306bc3fd30a0c861",
+                "reference": "f537f325280880bc57433a6d306bc3fd30a0c861",
                 "shasum": ""
             },
             "require": {
@@ -598,7 +598,7 @@
                 "driver",
                 "pdo"
             ],
-            "time": "2016-07-20 15:59:13"
+            "time": "2016-07-21 14:14:02"
         },
         {
             "name": "psr/http-message",
@@ -754,12 +754,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/youtube/vitess.git",
-                "reference": "a6a7c3e48998ae757487f9312a040585f81ed918"
+                "reference": "a1f5e4e535781a8ad51e526253fe4d07e3d53ccf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/youtube/vitess/zipball/a6a7c3e48998ae757487f9312a040585f81ed918",
-                "reference": "a6a7c3e48998ae757487f9312a040585f81ed918",
+                "url": "https://api.github.com/repos/youtube/vitess/zipball/a1f5e4e535781a8ad51e526253fe4d07e3d53ccf",
+                "reference": "a1f5e4e535781a8ad51e526253fe4d07e3d53ccf",
                 "shasum": ""
             },
             "require": {
@@ -776,7 +776,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "PHP client for Vitess",
-            "time": "2016-07-20 05:16:30"
+            "time": "2016-07-20 18:01:12"
         }
     ],
     "packages-dev": [],
