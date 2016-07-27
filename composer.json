@@ -29,7 +29,8 @@
     "require": {
         "grpc/grpc": "dev-release-0_13",
         "pixelfederation/vitess-php-pdo": "dev-master",
-        "php-console/php-console": "~3.0"
+        "php-console/php-console": "~3.0",
+        "greenlion/php-sql-parser": "dev-master#29bdef6fed5ba7fdfe3c9f942adfe73d6bdffa88"
     },
 
     "autoload": {
