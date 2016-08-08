@@ -43,6 +43,7 @@ if (isset($_GET["vitess"])) {
 		if ($connection->connect($credentials[0], $credentials[1], $credentials[2], $keyspace)) {
 //			$connection->set_charset(charset($connection)); // available in MySQLi since PHP 5.0.5
 //			$connection->query("SET sql_quote_show_create = 1, autocommit = 1");
+			$connection->getClusterConfig()->readFromMaster();
 			return $connection;
 		}
 		$return = 'Connection error. The server string has to be in the following format: vtgateHost:vtgatePort|vtctldHost:vtctldPort|cell.';
