@@ -54,7 +54,7 @@ class VitessPDOStatement extends PDOStatement
         $row = (object) $this->_offset++;
         $row->table = 'table';
         $fields = $this->getResult()->getCursor()->getFields();
-        $row->name = $fields[$this->_offset]->name;
+        $row->name = $fields[$this->_offset - 1]->name;
         $row->orgtable = 'orgtable';
         $row->orgname = 'orgname';
         //var_dump($this->_offset);
